@@ -1,5 +1,5 @@
 # DCQA-QUD-parsing
-### This is a repo for DCQA DUD parsing implemenation
+### This is a repo for DCQA QUD parsing implemenation
 
 #### Step 0 - Prepare Requirements & Download Models
 
