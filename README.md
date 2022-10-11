@@ -6,11 +6,12 @@
 Install the version of transformers toolkit in ./transformers (go to the directory, and run "pip install -e .")
 
 Download and unzip the models 
-https://1drv.ms/u/s!As41x9akhTMMxVtb1DXUCbgJj-r6?e=j7Powc 
 
-https://1drv.ms/u/s!As41x9akhTMMxWTqfGpANnX891hF?e=gP75XW
+[discourse - used in anchor prediction](https://1drv.ms/u/s!As41x9akhTMMxVtb1DXUCbgJj-r6?e=j7Powc) 
 
-https://1drv.ms/u/s!As41x9akhTMMxWbRBUFJOGGVkVIr?e=opJPMh
+[question_generation - used in question geneartion](https://1drv.ms/u/s!As41x9akhTMMxWTqfGpANnX891hF?e=gP75XW)
+
+[WNLI - used in re-rankering](https://1drv.ms/u/s!As41x9akhTMMxWbRBUFJOGGVkVIr?e=opJPMh)
 
 #### Step 1 - Anchor Sentence Prediction
 Put all testing articles in the directory <code>./inputa</code>
@@ -54,7 +55,7 @@ python -m torch.distributed.launch \
 
 Run following command to execute the question generation model. (file paths are at line 231, line 232)
 
-<code>$python ./transformers/examples/text-generation/run_generation.py     --model_type=gpt2     --model_name_or_path=./question_genertion</code>
+<code>python ./transformers/examples/text-generation/run_generation.py     --model_type=gpt2     --model_name_or_path=./question_genertion</code>
 
 #### Step 3 - Prepare re-ranking scores for each question
 <code>python 3.py</code>, this script prepares the input format of the reranker
