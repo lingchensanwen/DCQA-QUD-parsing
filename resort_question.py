@@ -1,9 +1,14 @@
+from numpy import number
+NUMBER_QUESTION_SELECTION = 10
+
 f=open("./output.txt",'r')
 fw=open("./results.txt",'w')
 f2=open("./questions.txt",'r')
-for i in range(19*3):
+number_of_questions = sum(1 for _ in open('questions.txt'))
+
+for i in range(int(number_of_questions/NUMBER_QUESTION_SELECTION)):
     maxx=-99999999999999
-    for j in range(10):
+    for j in range(NUMBER_QUESTION_SELECTION):
         l=f2.readline()
         try:
             score = f.readline().strip()
