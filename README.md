@@ -16,7 +16,7 @@ Download and unzip the models
 #### Step 1 - Anchor Sentence Prediction
 Put all testing articles in the directory <code>./inputa</code>
 
-<code>python 1.py</code>, this script generates the input format for the anchor prediction model.
+<code>python prepare_anchor_prediction.py</code>, this script generates the input format for the anchor prediction model.
 
 
 Run following command to execute the anchor prediction model.
@@ -51,14 +51,14 @@ python -m torch.distributed.launch \
 ```
 
 #### Step 2 - Generate Question
-<code>python 2.py</code>, this script performs NER masking and generates the input format of the GPT-2 question generation model
+<code>python prepare_question_generation.py</code>, this script performs NER masking and generates the input format of the GPT-2 question generation model
 
 Run following command to execute the question generation model. (file paths are at line 231, line 232)
 
 <code>python ./transformers/examples/text-generation/run_generation.py     --model_type=gpt2     --model_name_or_path=./question_genertion</code>
 
 #### Step 3 - Prepare re-ranking scores for each question
-<code>python 3.py</code>, this script prepares the input format of the reranker
+<code>python prepare_reranker.py</code>, this script prepares the input format of the reranker
 
 Download the GLUE data by running [this script](https://gist.github.com/W4ngatang/60c2bdb54d156a41194446737ce03e2e) and unpack it to some directory $GLUE_DIR.
 
@@ -86,7 +86,7 @@ python ./transformers/examples/text-classification/run_glue.py \
 ```
 
 #### Step 4 - Resort questions based on scores
-Run <code>python 4.py</code> to resort the generated questions according to scores.
+<code>python resort_question.py</code> to resort the generated questions according to scores.
 
 
 ## CC Attribution 4.0 International
