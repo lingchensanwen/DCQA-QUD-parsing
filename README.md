@@ -1,5 +1,5 @@
 # DCQA-QUD-parsing
-### This is a repo for DCQA QUD parsing implemenation
+### This is a repo for DCQA QUD parsing implementation
 
 #### Step 0 - Prepare Requirements & Download Models
 
@@ -9,7 +9,7 @@ Download and unzip the models
 
 [discourse - used in anchor prediction](https://1drv.ms/u/s!As41x9akhTMMxVtb1DXUCbgJj-r6?e=j7Powc) 
 
-[question_generation - used in question geneartion](https://1drv.ms/u/s!As41x9akhTMMxWTqfGpANnX891hF?e=gP75XW)
+[question_generation - used in question generation](https://1drv.ms/u/s!As41x9akhTMMxWTqfGpANnX891hF?e=gP75XW)
 
 [WNLI - used in re-rankering](https://1drv.ms/u/s!As41x9akhTMMxWbRBUFJOGGVkVIr?e=opJPMh)
 
@@ -19,7 +19,7 @@ Put all testing articles in the directory <code>./inputa</code>
 <code>python prepare_anchor_prediction.py</code>, this script generates the input format for the anchor prediction model.
 
 
-Run following command to execute the anchor prediction model.
+Run the following command to execute the anchor prediction model.
 
 ```
 python -m torch.distributed.launch \
@@ -53,7 +53,7 @@ python -m torch.distributed.launch \
 #### Step 2 - Generate Question
 <code>python prepare_question_generation.py</code>, this script performs NER masking and generates the input format of the GPT-2 question generation model
 
-Run following command to execute the question generation model. (file paths are at line 231, line 232)
+Run the following command to execute the question generation model. (file paths are at line 231, line 232)
 
 <code>python ./transformers/examples/text-generation/run_generation.py     --model_type=gpt2     --model_name_or_path=./question_genertion</code>
 
@@ -62,7 +62,7 @@ Run following command to execute the question generation model. (file paths are 
 
 Download the GLUE data by running [this script](https://gist.github.com/W4ngatang/60c2bdb54d156a41194446737ce03e2e) and unpack it to some directory $GLUE_DIR.
 
-Run following command to execute the reranker
+Run the following command to execute the reranker
 
 ```
 export GLUE_DIR=./glue 
