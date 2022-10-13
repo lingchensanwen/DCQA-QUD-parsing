@@ -20,15 +20,15 @@ This repo contains code and data source for paper in [Discourse Analysis via Que
 
 ## Table of Contents
 
-0. [Prepare Requirements & Download Models](Step_0)
-1. [Anchor Sentence Prediction](Step_1)
-2. [Generate Question](Step_2)
-3. [Prepare re-ranking scores for each question](Step_3)
-4. [Resort questions based on scores](Step_4)
-5. [Data Source](Data-Source)
+0. [Prepare Requirements & Download Models](#prepare-requirements-and-download-models)
+1. [Anchor Sentence Prediction](#anchor-sentence-prediction)
+2. [Generate Question](#generate-question)
+3. [Prepare re-ranking scores for each question](#prepare-re-ranking-scores-for-each-question)
+4. [Resort questions based on scores](#resort-questions-based-on-scores)
+5. [Data Source](#data-source)
 
 
-#### [Step_0] - Prepare Requirements & Download Models
+## Prepare Requirements and Download Models
 
 Install the version of transformers toolkit in ./transformers (go to the directory, and run "pip install -e .")
 
@@ -40,7 +40,7 @@ Download and unzip the models
 
 [WNLI - used in re-rankering](https://1drv.ms/u/s!As41x9akhTMMxWbRBUFJOGGVkVIr?e=opJPMh)
 
-#### [Step_1] - Anchor Sentence Prediction
+## Anchor Sentence Prediction
 Put all testing articles in the directory <code>./inputa</code>
 
 <code>python prepare_anchor_prediction.py</code>, this script generates the input format for the anchor prediction model.
@@ -77,14 +77,14 @@ python -m torch.distributed.launch \
 --null_score_diff_threshold 9999
 ```
 
-#### [Step_2]- Generate Question
+## Generate Question
 <code>python prepare_question_generation.py</code>, this script performs NER masking and generates the input format of the GPT-2 question generation model
 
 Run the following command to execute the question generation model. (file paths are at line 231, line 232)
 
 <code>python ./transformers/examples/text-generation/run_generation.py     --model_type=gpt2     --model_name_or_path=./question_genertion</code>
 
-#### [Step_3] - Prepare re-ranking scores for each question
+## Prepare re-ranking scores for each question
 <code>python prepare_reranker.py</code>, this script prepares the input format of the reranker
 
 Download the GLUE data by running [this script](https://gist.github.com/W4ngatang/60c2bdb54d156a41194446737ce03e2e) and unpack it to some directory $GLUE_DIR.
@@ -112,11 +112,12 @@ python ./transformers/examples/text-classification/run_glue.py \
   --overwrite_output_dir > output.txt
 ```
 
-#### [Step_4] - Resort questions based on scores
+## Resort questions based on scores
 <code>python resort_question.py</code> to resort the generated questions according to scores.
 
 
-#### [Data-Source] - [DCQA Discourse Comprehension by Question Answering](https://github.com/wjko2/DCQA-Discourse-Comprehension-by-Question-Answering)
+## Data Source
+[DCQA Discourse Comprehension by Question Answering](https://github.com/wjko2/DCQA-Discourse-Comprehension-by-Question-Answering)
 
 ```bibtex
 @InProceedings{ko2021dcqa,
