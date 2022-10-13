@@ -16,7 +16,7 @@ Authors: [Wei-Jen Ko](https://www.linkedin.com/in/wei-jen-ko-854597146), [Yating
 
 ## Introduction
 
-This repo contains code and data source for paper in [Discourse Analysis via Questions and Answers: Parsing Dependency Structures of Questions Under Discussion](https://arxiv.org/abs/2210.05905). This work present DCQA QUD Parser, the first QUD (Questions Under Discussion) parser for discourse analysis. In this repo, we include code to predict anchor sentence, generate question based on predicted anchor sentence, re-ranker to sort questions based their score. The data source could be found in [DCQA Discourse Comprehension by Question Answering](https://github.com/wjko2/DCQA-Discourse-Comprehension-by-Question-Answering).
+This repo contains code and data source for paper in [Discourse Analysis via Questions and Answers: Parsing Dependency Structures of Questions Under Discussion](https://arxiv.org/abs/2210.05905). This work present DCQA QUD Parser, the first QUD (Questions Under Discussion) parser for discourse analysis. In this repo, we include code to predict anchor sentence, generate question based on predicted anchor sentence, re-ranker to sort questions based their score. 
 
 ## Table of Contents
 
@@ -25,7 +25,7 @@ This repo contains code and data source for paper in [Discourse Analysis via Que
 2. [Generate Question](#generate-question)
 3. [Prepare re-ranking scores for each question](#prepare-re-ranking-scores-for-each-question)
 4. [Resort questions based on scores](#resort-questions-based-on-scores)
-5. [Data Source](#data-source)
+5. [Related Work: DCQA Discourse Comprehension by Question Answering](#related-work)
 
 
 ## Prepare Requirements and Download Models
@@ -116,7 +116,7 @@ python ./transformers/examples/text-classification/run_glue.py \
 <code>python resort_question.py</code> to resort the generated questions according to scores.
 
 
-## Data Source
+## Related Work
 [DCQA Discourse Comprehension by Question Answering](https://github.com/wjko2/DCQA-Discourse-Comprehension-by-Question-Answering)
 
 ```bibtex
