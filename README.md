@@ -1,7 +1,34 @@
 # DCQA-QUD-parsing
-### This is a repo for DCQA QUD parsing implementation
+### This is a repo for DCQA QUD parsing implementation 
 
-#### Step 0 - Prepare Requirements & Download Models
+Title: [Discourse Analysis via Questions and Answers: Parsing Dependency Structures of Questions Under Discussion](https://arxiv.org/abs/2210.05905)
+
+Authors: [Wei-Jen Ko](https://www.linkedin.com/in/wei-jen-ko-854597146), [Yating Wu](https://lingchensanwen.github.io), [Cutter Dalton](https://www.colorado.edu/linguistics/cutter-dalton), [Dananjay Srinivas](https://www.dsrinivas.com), [Greg Durrett](https://www.cs.utexas.edu/~gdurrett/), [Junyi Jessy Li](https://jessyli.com/)
+
+```bibtex
+@InProceedings{Ko2022dcqaQUDparser,
+  author    = {Ko, Wei-Jen and Wu, Yating and Dalton, Cutter and Srinivas, Dananjay and Durrett, Greg and Li, Junyi Jessy},
+  title     = {Discourse Analysis via Questions and Answers: Parsing Dependency Structures of Questions Under Discussion},
+  booktitle = {arxiv},
+  year      = {2022},
+}
+```
+
+## Introduction
+
+This repo contains code and data source for paper in [Discourse Analysis via Questions and Answers: Parsing Dependency Structures of Questions Under Discussion](https://arxiv.org/abs/2210.05905). This work present DCQA QUD Parser, the first QUD (Questions Under Discussion) parser for discourse analysis. In this repo, we include code to predict anchor sentence, generate question based on predicted anchor sentence, re-ranker to sort questions based their score. The data source could be found in [DCQA Discourse Comprehension by Question Answering](https://github.com/wjko2/DCQA-Discourse-Comprehension-by-Question-Answering).
+
+## Table of Contents
+
+0. [Prepare Requirements & Download Models](Step_0)
+1. [Anchor Sentence Prediction](Step_1)
+2. [Generate Question](Step_2)
+3. [Prepare re-ranking scores for each question](Step_3)
+4. [Resort questions based on scores](Step_4)
+5. [Data Source](Data-Source)
+
+
+#### [Step_0] - Prepare Requirements & Download Models
 
 Install the version of transformers toolkit in ./transformers (go to the directory, and run "pip install -e .")
 
@@ -13,7 +40,7 @@ Download and unzip the models
 
 [WNLI - used in re-rankering](https://1drv.ms/u/s!As41x9akhTMMxWbRBUFJOGGVkVIr?e=opJPMh)
 
-#### Step 1 - Anchor Sentence Prediction
+#### [Step_1] - Anchor Sentence Prediction
 Put all testing articles in the directory <code>./inputa</code>
 
 <code>python prepare_anchor_prediction.py</code>, this script generates the input format for the anchor prediction model.
@@ -50,14 +77,14 @@ python -m torch.distributed.launch \
 --null_score_diff_threshold 9999
 ```
 
-#### Step 2 - Generate Question
+#### [Step_2]- Generate Question
 <code>python prepare_question_generation.py</code>, this script performs NER masking and generates the input format of the GPT-2 question generation model
 
 Run the following command to execute the question generation model. (file paths are at line 231, line 232)
 
 <code>python ./transformers/examples/text-generation/run_generation.py     --model_type=gpt2     --model_name_or_path=./question_genertion</code>
 
-#### Step 3 - Prepare re-ranking scores for each question
+#### [Step_3] - Prepare re-ranking scores for each question
 <code>python prepare_reranker.py</code>, this script prepares the input format of the reranker
 
 Download the GLUE data by running [this script](https://gist.github.com/W4ngatang/60c2bdb54d156a41194446737ce03e2e) and unpack it to some directory $GLUE_DIR.
@@ -85,9 +112,20 @@ python ./transformers/examples/text-classification/run_glue.py \
   --overwrite_output_dir > output.txt
 ```
 
-#### Step 4 - Resort questions based on scores
+#### [Step_4] - Resort questions based on scores
 <code>python resort_question.py</code> to resort the generated questions according to scores.
 
+
+#### [Data-Source] - [DCQA Discourse Comprehension by Question Answering](https://github.com/wjko2/DCQA-Discourse-Comprehension-by-Question-Answering)
+
+```bibtex
+@InProceedings{ko2021dcqa,
+  author    = {Ko, Wei-Jen and Dalton,Cutter  and Simmons,Mark and  Fisher,Eliza and Durrett, Greg and Li, Junyi Jessy},
+  title     = {Discourse Comprehension: A Question Answering Framework to Represent Sentence Connections},
+  booktitle = {arxiv},
+  year      = {2021},
+}
+```
 
 ## CC Attribution 4.0 International
 
