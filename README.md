@@ -6,11 +6,11 @@ Title: [Discourse Analysis via Questions and Answers: Parsing Dependency Structu
 Authors: [Wei-Jen Ko](https://www.linkedin.com/in/wei-jen-ko-854597146), [Yating Wu](https://lingchensanwen.github.io), [Cutter Dalton](https://www.colorado.edu/linguistics/cutter-dalton), [Dananjay Srinivas](https://www.dsrinivas.com), [Greg Durrett](https://www.cs.utexas.edu/~gdurrett/), [Junyi Jessy Li](https://jessyli.com/)
 
 ```bibtex
-@InProceedings{Ko2022dcqaQUDparser,
-  author    = {Ko, Wei-Jen and Wu, Yating and Dalton, Cutter and Srinivas, Dananjay and Durrett, Greg and Li, Junyi Jessy},
-  title     = {Discourse Analysis via Questions and Answers: Parsing Dependency Structures of Questions Under Discussion},
-  booktitle = {arxiv},
-  year      = {2022},
+@article{ko2022discourse,
+  title={Discourse Analysis via Questions and Answers: Parsing Dependency Structures of Questions Under Discussion},
+  author={Ko, Wei-Jen and Wu, Yating and Dalton, Cutter and Srinivas, Dananjay and Durrett, Greg and Li, Junyi Jessy},
+  journal={arXiv preprint arXiv:2210.05905},
+  year={2022}
 }
 ```
 
