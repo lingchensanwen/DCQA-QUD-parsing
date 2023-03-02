@@ -18,6 +18,8 @@ model = AutoModelForTokenClassification.from_pretrained("dslim/bert-large-NER")
 nlp = pipeline("ner", model=model, tokenizer=tokenizer)
 
 fw=open('./ner.txt','w')
+info_mapping_file = open("extra_info_mapping.txt", "w")
+info_mapping_file.write("answer_id\tanswer_sentence\tanchor_id\tanchor_sentence\n")
 directory='./inputa/'
 articles=[]
 for filename in sorted(os.listdir(directory)):
@@ -89,11 +91,12 @@ for file_num in range(len(articles)):
         anchor_sentence_pos=int(sentence_anchor_pair[35:37])
         question['question']=current_article[cc]+' | '+current_article[int(float(anchor_sentence_pos))-1]
         if int(float(anchor_sentence_pos))<(len(current_article)+1):
+            info_mapping_file.write(str(cc+2)+"\t"+current_article[cc+1]+"\t"+str(anchor_sentence_pos)+"\t"+sentences[int(float(anchor_sentence_pos))-1]+"\n")
             fw.write(' '.join(sentences[:int(float(anchor_sentence_pos))-1]) if not len(sentences[:int(float(anchor_sentence_pos))-1])==1 else sentences[:int(float(anchor_sentence_pos))-1][0])
             fw.write(' <@ '+sentences[int(float(anchor_sentence_pos))-1]+' (> ')
             fw.write(' '.join(sentences[int(float(anchor_sentence_pos)):cc+1]) if not len(sentences[int(float(anchor_sentence_pos)):cc+1])==1 else sentences[int(float(anchor_sentence_pos)):cc+1][0])
             fw.write(' || '+sentences[int(float(anchor_sentence_pos))-1]+' || '+sentences_after_ner[cc+1])
-            fw.write(' | '+current_article[cc]+'\n')
+            fw.write(' | '+current_article[cc]+'\n') #placeholder for question
         question['id']=str(question_num).zfill(24)
         question_num=question_num+1
 
