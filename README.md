@@ -49,11 +49,7 @@ Put all testing articles in the directory <code>./inputa</code>
 Run the following command to execute the anchor prediction model.
 
 ```
-python -m torch.distributed.launch \
---nproc_per_node=2 \
---master_addr 127.0.0.6 \
---master_port 29506 \
-./transformers/examples/question-answering/run_squad.py \
+python ./transformers/examples/question-answering/run_squad.py \
 --model_type longformer \
 --model_name_or_path discourse \
 --do_eval \
