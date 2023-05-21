@@ -44,7 +44,14 @@ Download and unzip the models
 Put all testing articles in the directory <code>./inputa</code>
 
 <code>python prepare_anchor_prediction.py</code>, this script generates the input format for the anchor prediction model.
+The input file should have such a format
+sentence number + tab + sentence
+for example,
 
+```
+1 The purple elephant played a harmonica in the middle of the park.
+2 She wore a polka-dot hat and carried a suitcase full of rubber ducks.
+```
 
 Run the following command to execute the anchor prediction model.
 
