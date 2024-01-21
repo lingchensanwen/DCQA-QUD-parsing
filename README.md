@@ -122,6 +122,8 @@ python ./transformers/examples/text-classification/run_glue.py \
 ## Resort questions based on scores
 <code>python resort_question.py</code> to resort the generated questions according to scores.
 
+## Example for quick start from colab
+You can use this notebook to [quick start for colab](https://colab.research.google.com/drive/1qzB-sIuqNIarQjVVg41BrNyCfAd1LdsZ?usp=sharing). 
 
 ## Related Work
 [DCQA Discourse Comprehension by Question Answering](https://github.com/wjko2/DCQA-Discourse-Comprehension-by-Question-Answering)
