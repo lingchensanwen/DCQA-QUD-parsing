@@ -25,7 +25,8 @@ This repo contains code and data source for paper in [Discourse Analysis via Que
 2. [Generate Question](#generate-question)
 3. [Prepare re-ranking scores for each question](#prepare-re-ranking-scores-for-each-question)
 4. [Resort questions based on scores](#resort-questions-based-on-scores)
-5. [Related Work: DCQA Discourse Comprehension by Question Answering](#related-work)
+5. [Quick set up Example](#quick-setup)
+6. [Related Work: DCQA Discourse Comprehension by Question Answering](#related-work)
 
 
 ## Prepare Requirements and Download Models
@@ -122,7 +123,7 @@ python ./transformers/examples/text-classification/run_glue.py \
 ## Resort questions based on scores
 <code>python resort_question.py</code> to resort the generated questions according to scores.
 
-## Example for quick start from colab
+## Quick setup
 You can use this notebook to [quick start for colab](https://colab.research.google.com/drive/1qzB-sIuqNIarQjVVg41BrNyCfAd1LdsZ?usp=sharing). 
 
 ## Related Work
