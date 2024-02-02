@@ -6,11 +6,26 @@ Title: [Discourse Analysis via Questions and Answers: Parsing Dependency Structu
 Authors: [Wei-Jen Ko](https://www.linkedin.com/in/wei-jen-ko-854597146), [Yating Wu](https://lingchensanwen.github.io), [Cutter Dalton](https://www.colorado.edu/linguistics/cutter-dalton), [Dananjay Srinivas](https://www.dsrinivas.com), [Greg Durrett](https://www.cs.utexas.edu/~gdurrett/), [Junyi Jessy Li](https://jessyli.com/)
 
 ```bibtex
-@InProceedings{Ko-Et-Al:2023:DCQAParsing,
-  title = {Discourse Analysis via Questions and Answers: Parsing Dependency Structures of Questions Under Discussion}.,
-  author = {Wei-Jen Ko and Yating Wu and Cutter Dalton and Dananjay Srinivas and Greg Durrett and Junyi Jessy Li},
-  booktitle = {Findings of ACL},
-  year = {2023},
+@inproceedings{ko-etal-2023-discourse,
+    title = "Discourse Analysis via Questions and Answers: Parsing Dependency Structures of Questions Under Discussion",
+    author = "Ko, Wei-Jen  and
+      Wu, Yating  and
+      Dalton, Cutter  and
+      Srinivas, Dananjay  and
+      Durrett, Greg  and
+      Li, Junyi Jessy",
+    editor = "Rogers, Anna  and
+      Boyd-Graber, Jordan  and
+      Okazaki, Naoaki",
+    booktitle = "Findings of the Association for Computational Linguistics: ACL 2023",
+    month = jul,
+    year = "2023",
+    address = "Toronto, Canada",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.findings-acl.710",
+    doi = "10.18653/v1/2023.findings-acl.710",
+    pages = "11181--11195",
+    abstract = "Automatic discourse processing is bottlenecked by data: current discourse formalisms pose highly demanding annotation tasks involving large taxonomies of discourse relations, making them inaccessible to lay annotators. This work instead adopts the linguistic framework of Questions Under Discussion (QUD) for discourse analysis and seeks to derive QUD structures automatically. QUD views each sentence as an answer to a question triggered in prior context; thus, we characterize relationships between sentences as free-form questions, in contrast to exhaustive fine-grained taxonomies. We develop the first-of-its-kind QUD parser that derives a dependency structure of questions over full documents, trained using a large, crowdsourced question-answering dataset DCQA (Ko et al., 2022). Human evaluation results show that QUD dependency parsing is possible for language models trained with this crowdsourced, generalizable annotation scheme. We illustrate how our QUD structure is distinct from RST trees, and demonstrate the utility of QUD analysis in the context of document simplification. Our findings show that QUD parsing is an appealing alternative for automatic discourse processing.",
 }
 ```
 
@@ -138,14 +153,18 @@ You can use this notebook to [quick start for colab](https://colab.research.goog
       Fisher, Eliza  and
       Durrett, Greg  and
       Li, Junyi Jessy",
+    editor = "Goldberg, Yoav  and
+      Kozareva, Zornitsa  and
+      Zhang, Yue",
     booktitle = "Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing",
     month = dec,
     year = "2022",
     address = "Abu Dhabi, United Arab Emirates",
     publisher = "Association for Computational Linguistics",
     url = "https://aclanthology.org/2022.emnlp-main.806",
+    doi = "10.18653/v1/2022.emnlp-main.806",
     pages = "11752--11764",
-    abstract = "While there has been substantial progress in text comprehension through simple factoid question answering, more holistic comprehension of a discourse still presents a major challenge (Dunietz et al., 2020). Someone critically reflecting on a text as they read it will pose curiosity-driven, often open-ended questions, which reflect deep understanding of the content and require complex reasoning to answer (Ko et al., 2020; Westera et al., 2020). A key challenge in building and evaluating models for this type of discourse comprehension is the lack of annotated data, especially since collecting answers to such questions requires high cognitive load for annotators.This paper presents a novel paradigm that enables scalable data collection targeting the comprehension of news documents, viewing these questions through the lens of discourse. The resulting corpus, DCQA (Discourse Comprehension by Question Answering), captures both discourse and semantic links between sentences in the form of free-form, open-ended questions. On an evaluation set that we annotated on questions from Ko et al. (2020), we show that DCQA provides valuable supervision for answering open-ended questions. We additionally design pre-training methods utilizing existing question-answering resources, and use synthetic data to accommodate unanswerable questions.",
+    abstract = "While there has been substantial progress in text comprehension through simple factoid question answering, more holistic comprehension of a discourse still presents a major challenge (Dunietz et al., 2020). Someone critically reflecting on a text as they read it will pose curiosity-driven, often open-ended questions, which reflect deep understanding of the content and require complex reasoning to answer (Ko et al., 2020; Westera et al., 2020). A key challenge in building and evaluating models for this type of discourse comprehension is the lack of annotated data, especially since collecting answers to such questions requires high cognitive load for annotators. This paper presents a novel paradigm that enables scalable data collection targeting the comprehension of news documents, viewing these questions through the lens of discourse. The resulting corpus, DCQA (Discourse Comprehension by Question Answering), captures both discourse and semantic links between sentences in the form of free-form, open-ended questions. On an evaluation set that we annotated on questions from Ko et al. (2020), we show that DCQA provides valuable supervision for answering open-ended questions. We additionally design pre-training methods utilizing existing question-answering resources, and use synthetic data to accommodate unanswerable questions.",
 }
 ```
 
