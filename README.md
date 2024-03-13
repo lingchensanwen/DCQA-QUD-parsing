@@ -144,30 +144,6 @@ You can use this notebook to [quick start for colab](https://colab.research.goog
 ## Related Work
 [DCQA Discourse Comprehension by Question Answering](https://github.com/wjko2/DCQA-Discourse-Comprehension-by-Question-Answering)
 
-```bibtex
-@inproceedings{ko-etal-2022-discourse,
-    title = "Discourse Comprehension: A Question Answering Framework to Represent Sentence Connections",
-    author = "Ko, Wei-Jen  and
-      Dalton, Cutter  and
-      Simmons, Mark  and
-      Fisher, Eliza  and
-      Durrett, Greg  and
-      Li, Junyi Jessy",
-    editor = "Goldberg, Yoav  and
-      Kozareva, Zornitsa  and
-      Zhang, Yue",
-    booktitle = "Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing",
-    month = dec,
-    year = "2022",
-    address = "Abu Dhabi, United Arab Emirates",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2022.emnlp-main.806",
-    doi = "10.18653/v1/2022.emnlp-main.806",
-    pages = "11752--11764",
-    abstract = "While there has been substantial progress in text comprehension through simple factoid question answering, more holistic comprehension of a discourse still presents a major challenge (Dunietz et al., 2020). Someone critically reflecting on a text as they read it will pose curiosity-driven, often open-ended questions, which reflect deep understanding of the content and require complex reasoning to answer (Ko et al., 2020; Westera et al., 2020). A key challenge in building and evaluating models for this type of discourse comprehension is the lack of annotated data, especially since collecting answers to such questions requires high cognitive load for annotators. This paper presents a novel paradigm that enables scalable data collection targeting the comprehension of news documents, viewing these questions through the lens of discourse. The resulting corpus, DCQA (Discourse Comprehension by Question Answering), captures both discourse and semantic links between sentences in the form of free-form, open-ended questions. On an evaluation set that we annotated on questions from Ko et al. (2020), we show that DCQA provides valuable supervision for answering open-ended questions. We additionally design pre-training methods utilizing existing question-answering resources, and use synthetic data to accommodate unanswerable questions.",
-}
-```
-
 ## CC Attribution 4.0 International
 
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
