@@ -50,11 +50,11 @@ Install the version of transformers toolkit in ./transformers (go to the directo
 
 Download and unzip the models 
 
-[discourse - used in anchor prediction](https://utexas.box.com/s/b8frrh0ezsz77755f7fkxyf5t5bgahpl) 
+[discourse - used in anchor prediction](https://utexas.box.com/s/100w00knu9eg73ihec9iy1p411mexr9s) 
 
-[question_generation - used in question generation](https://utexas.box.com/s/a8mfehzsitofb2a1l1ldnf0szt1dlw2v)
+[question_generation - used in question generation](https://utexas.box.com/s/5q78o3erxp6a3s7ifxctihn2y2pfntq6)
 
-[WNLI - used in re-rankering](https://utexas.box.com/s/vcpf0hvqb3yyk05ans6xt12azyu2ly9l)
+[WNLI - used in re-rankering](https://utexas.box.com/s/rve3bl5683xvir72qcp906xnpo60lft8)
 
 ## Anchor Sentence Prediction
 Put all testing articles in the directory <code>./inputa</code>
